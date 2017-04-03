@@ -26,9 +26,24 @@ Proxy must be reachable at http://<docker-host>:8080 .
 
 Usage statistics must be available at http://<docker-host>:8080/stats
 
+
+##Usage stats tracked:
+
 total bytes transferred
 uptime
-Code must run with Python 3.5+.
+
+
+## Requires
+
+Python 3.5+
+tornado library
+
+
+## Running using Docker
+
+```
+docker-compose pull
+docker-compose up -d
 
 Code must be delivered as a link to public GitHub repository.
 
