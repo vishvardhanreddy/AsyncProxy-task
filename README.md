@@ -2,13 +2,13 @@
 This is a Simple asynchronous HTTP proxy with range header and range query parameter support. This progam fulfills following requirements.
 
 
-Task is to build as an asynchronous HTTP proxy (see definition in RFC2616) complying to the requirements specified below.
+Task is to build an asynchronous HTTP proxy (see definition in RFC2616) complying to the requirements specified below.
 
-Range requests is supported as defined in RFC2616, but also via range query parameter.
+Range requests are supported as defined in RFC2616, but also via range query parameter.
 
 HTTP 416 error is returned in case where both header and query parameter are specified, but with a different value.
 
-Program starts with a single command docker-compose up.
+Program starts with a single command 'docker-compose up'.
 
 Proxy is reachable at http://<docker-host>:8080 .
 
@@ -18,13 +18,18 @@ Usage statistics are available at http://<docker-host>:8080/stats
 
 Running using Docker
 
-```
-docker-compose build --pull
-docker-compose up -d
 
 ```
+docker-compose up
+```
 
-Usage stats tracked:
+To run the process in background and be able to enter commands at the command prompt
+
+```
+docker-compose up -d   
+```
+
+Usage stats tracked on stats page:
 
 ```
 total bytes transferred
