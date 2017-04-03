@@ -10,10 +10,16 @@ HTTP 416 error is returned in case where both header and query parameter are spe
 
 Program starts with a single command 'docker-compose up'.
 
-Proxy is reachable at http://<docker-host>:8080 .
+Proxy is reachable at 
+```
+http://<docker-host>:8080 .
+```
 
-Usage statistics are available at http://<docker-host>:8080/stats
+Usage statistics are available at 
 
+```
+http://<docker-host>:8080/stats
+```
 
 
 Running using Docker
