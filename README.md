@@ -2,22 +2,18 @@
 This is a Simple asynchronous HTTP proxy with range header and range query parameter support. This progam fulfills following requirements.
 
 
-Task is to build an asynchronous HTTP proxy (see definition in RFC2616) complying to the requirements specified below.
+Task is to build as an asynchronous HTTP proxy (see definition in RFC2616) complying to the requirements specified below.
 
-Range requests must be supported as defined in RFC2616, but also via range query parameter.
+Range requests is supported as defined in RFC2616, but also via range query parameter.
 
-HTTP 416 error must be returned in case where both header and query parameter are specified, but with a different value.
+HTTP 416 error is returned in case where both header and query parameter are specified, but with a different value.
 
-Program must start with a single command docker-compose up.
+Program starts with a single command docker-compose up.
 
-Proxy must be reachable at http://<docker-host>:8080 .
+Proxy is reachable at http://<docker-host>:8080 .
 
-Usage statistics must be available at http://<docker-host>:8080/stats
+Usage statistics are available at http://<docker-host>:8080/stats
 
-
-
-
-To run the proxy on different port or address edit add and edit environment section in docker-compose.yml.
 
 
 Running using Docker
@@ -51,6 +47,8 @@ proxy_port = 8080
 ```
 
 To run the proxy on different port or address edit and add edit environment section in docker-compose.yml.
+
+Run Commands
 
 ```
 curl -x http://<proxy_host>:<proxy_port> <request url> -o <destination_file>
