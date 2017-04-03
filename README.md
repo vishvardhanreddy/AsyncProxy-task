@@ -2,11 +2,7 @@
 This is a Simple asynchronous HTTP proxy with range header and range query parameter support. This progam fulfills following requirements.
 
 
-To run the proxy on different port or address edit the environment section in docker-compose.yml.
-
 Task is to build an asynchronous HTTP proxy (see definition in RFC2616) complying to the requirements specified below.
-
-Requirements
 
 Range requests must be supported as defined in RFC2616, but also via range query parameter.
 
@@ -27,7 +23,7 @@ To run the proxy on different port or address edit add and edit environment sect
 Running using Docker
 
 ```
-docker-compose pull
+docker-compose build --pull
 docker-compose up -d
 
 ```
@@ -46,15 +42,15 @@ Python 3.5+
 tornado library
 ```
 
-Running using Docker
+Default values 
 
 ```
-docker-compose pull
-docker-compose up -d
+proxy_host = 0.0.0.0
+proxy_port = 8080
+
 ```
 
-Code must be delivered as a link to public GitHub repository.
-
+To run the proxy on different port or address edit and add edit environment section in docker-compose.yml.
 
 ```
 curl -x http://<proxy_host>:<proxy_port> <request url> -o <destination_file>
